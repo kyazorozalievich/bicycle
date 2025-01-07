@@ -1,0 +1,213 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home {
+    padding-top: 50px;
+  
+    &Bg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 500px;
+  
+      @media (max-width: 1024px) {
+        padding-right: 0;
+        justify-content: flex-start;
+        padding-left: 50px;
+      }
+  
+      @media (max-width: 768px) {
+        padding-left: 20px;
+      }
+  
+      &Text {
+        @include flex-column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+  
+        h1 {
+          font-weight: 700;
+          font-size: 3rem;
+  
+          @media (max-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+  
+        p {
+          width: 540px;
+          color: #d1d5db;
+  
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+  
+        button {
+          width: 150px;
+          height: 40px;
+          background-color: #f97316;
+          border-radius: 10px;
+        }
+      }
+    }
+  
+    &Block {
+      width: 550px;
+      height: 200px;
+      @include flex-column;
+      align-items: flex-start;
+      gap: 20px;
+      padding-left: 150px;
+      justify-content: center;
+      background-color: black;
+      color: white;
+  
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding-left: 50px;
+      }
+  
+      @media (max-width: 768px) {
+        height: auto;
+        padding: 20px;
+      }
+  
+      h1 {
+        width: 250px;
+        font-size: 20px;
+  
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+  
+      button {
+        color: #f97316;
+        font-weight: 600;
+      }
+    }
+  
+    &Icons {
+      @include flex-center;
+      justify-content: space-between;
+      height: 100px;
+      width: 100%;
+  
+      img {
+        width: 10%;
+  
+        @media (max-width: 768px) {
+          width: 15%;
+        }
+      }
+    }
+  
+    &NewProducts {
+      width: 100%;
+      height: 750px;
+      background-color: #f3f4f6;
+      padding-top: 50px;
+  
+      @media (max-width: 768px) {
+        height: auto;
+      }
+  
+      .container {
+        width: 90%;
+        @include flex-column;
+        align-items: flex-start;
+  
+        h1 {
+          font-size: 40px;
+          font-weight: 700;
+        }
+  
+        .scroll {
+          @include flex-center;
+          gap: 30px;
+          height: 600px;
+          width: 100%;
+          overflow-x: scroll;
+  
+          @media (max-width: 768px) {
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  
+    &Catalog {
+      width: 90%;
+      @include flex-center;
+      justify-content: center;
+      margin-top: 50px;
+  
+      .flex {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 20px;
+  
+        h1 {
+          font-size: 40px;
+          font-weight: 700;
+        }
+  
+        img {
+          width: 1200px;
+          cursor: pointer;
+  
+          @media (max-width: 1200px) {
+            width: 100%;
+          }
+        }
+  
+        .catalogGrid {
+          @include flex-center;
+          gap: 20px;
+          flex-wrap: wrap;
+  
+          img {
+            width: 370px;
+            cursor: pointer;
+  
+            @media (max-width: 768px) {
+              width: 100%;
+            }
+          }
+  
+          .ekipVelos {
+            @include flex-column;
+            align-items: flex-start;
+            gap: 20px;
+  
+            img {
+              width: 415px;
+  
+              @media (max-width: 768px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    // ... Продолжайте добавлять стили для остальных секций, следуя тому же подходу
+  }

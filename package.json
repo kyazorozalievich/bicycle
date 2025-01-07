@@ -21,6 +21,7 @@
     "react-router-dom": "^6.26.1",
     "react-toastify": "^10.0.5",
     "redux": "^5.0.1",
+    "sass": "^1.78.0",
     "slick-slider": "^1.8.2"
   },
   "devDependencies": {

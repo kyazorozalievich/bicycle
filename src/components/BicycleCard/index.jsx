@@ -7,24 +7,24 @@ import "react-toastify/dist/ReactToastify.css";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 //Img
-import america from "../../assets/image/america.png";
+import italy from "../../assets/image/italy.webp";
 import france from "../../assets/image/france.png";
 import ispany from "../../assets/image/ispany.png";
-import italy from "../../assets/image/italy.webp";
+import america from "../../assets/image/america.png";
 import shvecaria from "../../assets/image/shvecaria.jpg";
 //Icon
-import { RiNavigationLine } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
+import { RiNavigationLine } from "react-icons/ri";
 //
 
 const BicycleCard = ({ el }) => {
   const { user } = useAuth();
   const navigate = useNavigate();
   //UseSatate
-  const [openOver, setOpenOver] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [openOver, setOpenOver] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   //function
   function postTelegram() {

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import {
   createProduct,
   getProducts,
@@ -16,43 +16,43 @@ const Create = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   //UseState
+  const [year, setYear] = useState("");
   const [inputUrl, setInputUrl] = useState("");
   const [inputName, setInputName] = useState("");
   const [inputPrice, setInputPrice] = useState("");
-  const [inputDescription, setInputDescription] = useState("");
-  const [inputCategory, setInputCategory] = useState("");
   const [inputBrend, setInputBrend] = useState("");
-  const [inputMaterial, setInputMaterial] = useState("");
+  const [sizeSprice, setSizeSprice] = useState("");
+  const [sizeMprice, setSizeMprice] = useState("");
+  const [sizeLprice, setSizeLprice] = useState("");
+  const [sizeXLprice, setSizeXLprice] = useState("");
   const [inputCountry, setInputCountry] = useState("");
-  const [year, setYear] = useState("");
+  const [inputCategory, setInputCategory] = useState("");
+  const [inputMaterial, setInputMaterial] = useState("");
+  const [inputDescription, setInputDescription] = useState("");
   const [sizeS, setSizeS] = useState(false);
   const [sizeM, setSizeM] = useState(false);
   const [sizeL, setSizeL] = useState(false);
   const [sizeXL, setSizeXL] = useState(false);
   const [colorRed, setColorRed] = useState(false);
+  const [sizeSred, setSizeSred] = useState(false);
+  const [sizeMred, setSizeMred] = useState(false);
+  const [sizeLred, setSizeLred] = useState(false);
+  const [sizeXLred, setSizeXLred] = useState(false);
+  const [colorGreen, setColorGreen] = useState(false);
+  const [sizeSgreen, setSizeSgreen] = useState(false);
+  const [sizeMgreen, setSizeMgreen] = useState(false);
+  const [sizeLgreen, setSizeLgreen] = useState(false);
   const [colorYellow, setColorYellow] = useState(false);
   const [colorOrange, setColorOrange] = useState(false);
-  const [colorGreen, setColorGreen] = useState(false);
-  const [sizeSprice, setSizeSprice] = useState("");
-  const [sizeSred, setSizeSred] = useState(false);
   const [sizeSyellow, setSizeSyellow] = useState(false);
   const [sizeSorange, setSizeSorange] = useState(false);
-  const [sizeSgreen, setSizeSgreen] = useState(false);
-  const [sizeMprice, setSizeMprice] = useState("");
   const [sizeMyellow, setSizeMyellow] = useState(false);
-  const [sizeMgreen, setSizeMgreen] = useState(false);
   const [sizeMorange, setSizeMorange] = useState(false);
-  const [sizeMred, setSizeMred] = useState(false);
-  const [sizeLprice, setSizeLprice] = useState("");
   const [sizeLyellow, setSizeLyellow] = useState(false);
   const [sizeLorange, setSizeLorange] = useState(false);
-  const [sizeLgreen, setSizeLgreen] = useState(false);
-  const [sizeLred, setSizeLred] = useState(false);
-  const [sizeXLprice, setSizeXLprice] = useState("");
-  const [sizeXLred, setSizeXLred] = useState(false);
+  const [sizeXLgreen, setSizeXLgreen] = useState(false);
   const [sizeXLyellow, setSizeXLyellow] = useState(false);
   const [sizeXLorange, setSizeXLorange] = useState(false);
-  const [sizeXLgreen, setSizeXLgreen] = useState(false);
 
   //function
   function postBicycle() {

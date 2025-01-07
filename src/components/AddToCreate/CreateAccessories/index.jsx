@@ -11,13 +11,13 @@ const CreateAccessories = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   //State
+  const [inpUrl, setInpUrl] = useState("");
   const [inpName, setInpName] = useState("");
   const [inpPrice, setInpPrice] = useState("");
-  const [inpUrl, setInpUrl] = useState("");
-  const [inpDescription, setInpDescription] = useState("");
+  const [inpBrend, setInputBrend] = useState("");
   const [inpGarant, setInpGarant] = useState("");
   const [inpMaterial, setInpMaterial] = useState("");
-  const [inpBrend, setInputBrend] = useState("");
+  const [inpDescription, setInpDescription] = useState("");
   //function
   function postAccessories() {
     let newProduct = {

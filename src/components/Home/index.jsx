@@ -6,6 +6,7 @@ import { getProducts } from "../../redux/reducers/sliceProduct";
 import { getAccess } from "../../redux/creates/sliceAccessories";
 import Footer from "../Footer";
 import BicycleCard from "../BicycleCard";
+import scss from './Home.module.scss'
 //Img
 import trade from "../../assets/image/trade.svg";
 import acces from "../../assets/image/acces.svg";
